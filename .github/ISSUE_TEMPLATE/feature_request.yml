@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest an improvement or a new capability for PixelForge Studio.
+title: "[Feature]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea for PixelForge Studio.
+
+        Describe the problem or workflow you want to improve. Clear use cases help evaluate suggestions.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this feature solve?
+      description: Describe the limitation or difficulty you currently encounter.
+      placeholder: "I often need to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: Explain how you imagine the feature working.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you tried another workflow or workaround?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add examples or context that could help us understand the use case. Do not include sensitive information.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked that a similar feature request has not already been submitted.
+          required: true
