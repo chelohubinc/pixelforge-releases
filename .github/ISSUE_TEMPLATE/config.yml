@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: PixelForge Studio Documentation
+    url: https://pixelforge-studio.borislukrece.com/en/docs
+    about: Read the documentation before opening an issue.
+  - name: PixelForge Studio Downloads
+    url: https://github.com/chelohubinc/pixelforge-releases/releases
+    about: Find the latest version and previous releases.
