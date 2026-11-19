@@ -1,0 +1,138 @@
+name: Bug report
+description: Report a reproducible problem with PixelForge Studio.
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem.
+
+        Before submitting, check whether the issue has already been reported. Please do not include passwords, access tokens, private images, or other sensitive information.
+
+  - type: input
+    id: app-version
+    attributes:
+      label: PixelForge Studio version
+      description: The version shown in the application or release you installed.
+      placeholder: "e.g. 0.1.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      description: Select the platform on which the problem occurred.
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: Operating system version
+      description: Include the OS version and, if relevant, distribution.
+      placeholder: "e.g. Windows 11 24H2, Ubuntu 22.04"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: model
+    attributes:
+      label: AI model
+      description: Which model were you using when the issue occurred?
+      options:
+        - RealESRGAN_x4plus
+        - RealESRGAN_x4plus_anime_6B
+        - RealESRNet_x4plus
+        - Not applicable
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: Upscaling factor
+      options:
+        - 2x
+        - 4x
+        - Not applicable
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Processing device
+      description: Which processing device was selected?
+      options:
+        - CPU
+        - GPU
+        - Automatic / not sure
+        - Not applicable
+    validations:
+      required: true
+
+  - type: input
+    id: image-details
+    attributes:
+      label: Input image details
+      description: Provide the image dimensions and format. Do not upload private or sensitive images.
+      placeholder: "e.g. 1920 × 1080, PNG"
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Describe the actions that lead to the problem.
+      placeholder: |
+        1. Open PixelForge Studio.
+        2. Select an image.
+        3. Choose a model and processing settings.
+        4. Start processing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include the complete error message if one was displayed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or additional context
+      description: Add relevant logs or details. Remove personal information, file paths containing private data, credentials, and tokens before posting.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked that a similar issue has not already been reported.
+          required: true
+        - label: I have removed passwords, access tokens, and other sensitive information from this report.
+          required: true
